@@ -19,6 +19,7 @@ public class Main {
 			
 			switch (choice) {
 			case 1:
+				// ============ Display All Instrument ============
 				System.out.println("<====== All Instrument ======>");
 				for (Instrument allInstru : allInstrument) {
 					System.out.println("==> [" + allInstru.toString() + "]");
@@ -45,12 +46,14 @@ public class Main {
 							// ==== Buy Piano ====
 							Piano piano = new Piano();
 							piano.initialize();
+							piano.setInstrumentName("Piano");
 							allInstrument.add(piano);
 							break;
 						case 2 :
-							// ==== Buy Piano ====
+							// ==== Buy Arranger KeyBoard ====
 							Arranger_Keyboard arrangerKeyBoard = new Arranger_Keyboard();
 							arrangerKeyBoard.initialize();
+							arrangerKeyBoard.setInstrumentName("Arranger KeyBoard");
 							allInstrument.add(arrangerKeyBoard);
 							break;
 					}
@@ -68,12 +71,14 @@ public class Main {
 							// ==== Buy Electric Guitar ====
 							Electric_Guitar electricGuitar = new Electric_Guitar();
 							electricGuitar.initialize();
+							electricGuitar.setInstrumentName("Electric Guitar");
 							allInstrument.add(electricGuitar);
 							break;
 						case 2 :
 							// ==== Buy Violin ====
 							Violon violon = new Violon();
 							violon.initialize();
+							violon.setInstrumentName("Violon");
 							allInstrument.add(violon);
 							break;
 					}
@@ -91,35 +96,46 @@ public class Main {
 							// ==== Buy Acoustic Drums ====
 							Acoustic_Drum acousticDrum = new Acoustic_Drum();
 							acousticDrum.initialize();
+							acousticDrum.setInstrumentName("Accoustic Drum");
 							allInstrument.add(acousticDrum);
 							break;
 						case 2 :
 							// ==== Buy Electric Drums ====
 							Electric_Drum electricDrum = new Electric_Drum();
 							electricDrum.initialize();
+							electricDrum.setInstrumentName("Electric Drum");
 							allInstrument.add(electricDrum);
 							break;
 					}
 					break;
 				}
+			break;
+			case 4 :
+				// ============ Edit Instrument ============
+				System.out.println("<====== Edit Instrument ======>");
 				
+				for (Instrument allInstru : allInstrument) {
+					System.out.println("==> Instrument : " + allInstru.getInstrumentName() + " (Id :" + allInstru.getId() + " | Brand : " + allInstru.getBrand() + " | Model : " + allInstru.getModel() + ")");
+				}
+				
+				System.out.println(findInstrument(allInstrument));
 				break;
 			
 			}
 		 } while (choice != 6);		
 	}
 	
-	public static Instrument findComputer(ArrayList<Instrument> allInstrument) {
+	public static Instrument findInstrument(ArrayList<Instrument> allInstrument) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Which ID ?");
+		System.out.println("\n=> Instrument to Edit | ID : ");
 		int id = scanner.nextInt();
 
 		int i = 0;
 		Instrument instrument = null;
-		boolean found = false; // flag
+		boolean found = false;
 		while (i < allInstrument.size() && !found) {
 			if (id == allInstrument.get(i).getId()) {
-				instrument = allInstrument.get(i) ;
+				instrument = allInstrument.get(i);
 				found = true;
 			}
 			i++;

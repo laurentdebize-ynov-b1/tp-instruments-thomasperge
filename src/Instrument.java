@@ -5,6 +5,7 @@ public class Instrument {
 	private String brand;
 	private String model;
 	private State status;
+	private String instrumentName;
 	private int id;
 	
 	public Instrument() {
@@ -62,6 +63,14 @@ public class Instrument {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getInstrumentName() {
+		return instrumentName;
+	}
+
+	public void setInstrumentName(String instrumentName) {
+		this.instrumentName = instrumentName;
 	}
 
 	public void initialize() {
