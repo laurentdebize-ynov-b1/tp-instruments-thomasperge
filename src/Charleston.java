@@ -10,7 +10,7 @@ public class Charleston extends Percussion_Acoustic {
 	}
 	
 	public String toString() {
-		return "[Charleston | Diameter : " + this.getDiameter() + "cm | Material : " + this.getMaterial() + " | Sound : " + this.getSound() + "]\n";
+		return "[Charleston (Diameter: " + this.getDiameter() + "cm | Material: " + this.getMaterial() + " | Sound: " + this.getSound() + ")]\n";
 	}
 	
 	public void initialize() {
@@ -45,7 +45,7 @@ public class Charleston extends Percussion_Acoustic {
 		
 		super.setSound("pssst...");
 		
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println("\n/!\\ Percussion created /!\\");
+		System.out.println("==>" + this.toString());
 	}
 }

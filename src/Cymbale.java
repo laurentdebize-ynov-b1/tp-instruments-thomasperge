@@ -10,7 +10,7 @@ public class Cymbale extends Percussion_Acoustic {
 	}
 	
 	public String toString() {
-		return "[Cymbale | Diameter : " + this.getDiameter() + " | Material : " + this.getMaterial() + " | Sound : " + this.getSound() + "]";
+		return "[Cymbale (Diameter: " + this.getDiameter() + " | Material: " + this.getMaterial() + " | Sound: " + this.getSound() + ")]";
 	}
 	
 	public void initialize() {
@@ -46,6 +46,6 @@ public class Cymbale extends Percussion_Acoustic {
 		super.setSound("diiiiing...");
 		
 		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println("==>" + this.toString());
 	}
 }

@@ -9,7 +9,7 @@ public class Tom_Pad extends Percussion_Electronic {
 	}
 	
 	public String toString() {
-		return "[Tom Pad | Diameter : " + this.getDiameter() + " | Material : " + this.getMaterial() + " | Sound : " + this.getSound() + "]";
+		return "[Tom Pad (Diameter: " + this.getDiameter() + " | Material: " + this.getMaterial() + " | Sound: " + this.getSound() + ")]";
 	}
 	
 	public void initialize() {

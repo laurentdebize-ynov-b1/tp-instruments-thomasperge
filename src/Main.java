@@ -11,9 +11,8 @@ public class Main {
 			System.out.println("\n<========== Menu Music Shop ==========>");
 			System.out.println("=> 1 : Display all Instrument");
 			System.out.println("=> 2 : Buy an Instrument");
-			System.out.println("=> 3 : Buy an Percussion");
-			System.out.println("=> 4 : Edit an Instrument");
-			System.out.println("=> 5 : Leave");
+			System.out.println("=> 3 : Edit an Instrument");
+			System.out.println("=> 4 : Leave");
 			choice = scanner.nextInt();
 			scanner.nextLine();
 			
@@ -21,6 +20,10 @@ public class Main {
 			case 1:
 				// ============ Display All Instrument ============
 				System.out.println("<====== All Instrument ======>");
+				if (allInstrument.size() == 0) {
+					System.out.println("==> No Instrument in STOCK or in EXPOSITION");
+					break;
+				}
 				for (Instrument allInstru : allInstrument) {
 					System.out.println("==> [" + allInstru.toString() + "]");
 				}
@@ -97,13 +100,101 @@ public class Main {
 							Acoustic_Drum acousticDrum = new Acoustic_Drum();
 							acousticDrum.initialize();
 							acousticDrum.setInstrumentName("Acoustic Drums");
+							
+							ArrayList<Percussion_Acoustic> acousticPercussion = new ArrayList<Percussion_Acoustic>();
+							
+							// ===== Choose Percussion =====
+							int choisePercussion;
+							do {
+								System.out.println("===> Choose Percussion :");
+								System.out.println("===> 1: Charleston | 2: Bass Drum | 3: Snare Drum | 4: Tom | 5: Cymbale | 6: Finish ");
+								
+								choisePercussion = scanner.nextInt();
+								
+								switch (choisePercussion) {
+									case 1 :
+										// Charlston :
+										Charleston charleston = new Charleston();
+										charleston.initialize();
+										acousticPercussion.add(charleston);
+										break;
+										
+									case 2 :
+										// Bass Drum :
+										Bass_Drum bassdrum = new Bass_Drum();
+										bassdrum.initialize();
+										acousticPercussion.add(bassdrum);
+										break;
+										
+									case 3 :
+										// Snare Drum :
+										Snare_Drum snareDrum = new Snare_Drum();
+										snareDrum.initialize();
+										acousticPercussion.add(snareDrum);
+										break;
+									case 4 :
+										// Tom :
+										Tom tom = new Tom();
+										tom.initialize();
+										acousticPercussion.add(tom);
+										break;
+									case 5 :
+										// Cymbale :
+										Cymbale cymbale = new Cymbale();
+										cymbale.initialize();
+										acousticPercussion.add(cymbale);
+										break;
+								}
+							} while (choisePercussion != 6);
+							
+							
+							acousticDrum.setAcousticDrums(acousticPercussion);
 							allInstrument.add(acousticDrum);
+							
 							break;
 						case 2 :
 							// ==== Buy Electric Drums ====
 							Electric_Drum electricDrum = new Electric_Drum();
 							electricDrum.initialize();
 							electricDrum.setInstrumentName("Electric Drums");
+							
+							ArrayList<Percussion_Electronic> electricPercussion = new ArrayList<Percussion_Electronic>();
+							
+							// ===== Choose Percussion =====
+							int choisePercussionE;
+							do {
+								System.out.println("===> Choose Percussion :");
+								System.out.println("===> 1: Bass Drum Pad | 2: Tom Pad | 3: Cymbale Pad | 4: Finish ");
+								
+								choisePercussionE = scanner.nextInt();
+								
+								switch (choisePercussionE) {
+									case 1 :
+										// Bass Drum Pad :
+										Bass_Drum_Pad bassdrumpad = new Bass_Drum_Pad();
+										bassdrumpad.initialize();
+										electricPercussion.add(bassdrumpad);
+										break;
+										
+									case 2 :
+										// Tom Pad :
+										Tom_Pad tompad = new Tom_Pad();
+										tompad.initialize();
+										electricPercussion.add(tompad);
+										break;
+										
+									case 3 :
+										// Cymbale Pad :
+										Cymbale_Pad cymbalepad = new Cymbale_Pad();
+										cymbalepad.initialize();
+										electricPercussion.add(cymbalepad);
+										break;
+								}
+							} while (choisePercussionE != 4);
+							
+							
+							electricDrum.setElectricDrums(electricPercussion);
+							
 							allInstrument.add(electricDrum);
 							break;
 					}
@@ -111,12 +202,6 @@ public class Main {
 				}
 			break;
 			case 3 :
-				// ============ Buy an Percussion ============
-				System.out.println("<====== Buy an Percussion ======>");
-				Instrument findADrums = findADrums(allInstrument);
-				
-				break;
-			case 4 :
 				// ============ Edit Instrument ============
 				System.out.println("<====== Edit Instrument ======>");
 				
@@ -138,7 +223,7 @@ public class Main {
 				break;
 			
 			}
-		 } while (choice != 6);		
+		 } while (choice != 4);		
 	}
 	
 	public static Instrument findInstrument(ArrayList<Instrument> allInstrument) {
@@ -156,38 +241,6 @@ public class Main {
 			}
 			i++;
 		}
-		if (found == false) {
-			System.out.println("=> No ID : " + id + " found...");
-			return null;
-		} else {
-			return instrument;
-		}
-	}
-	
-	public static Instrument findADrums(ArrayList<Drums> allInstrument) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("=> Enter Drums Id : ");
-		int id = scanner.nextInt();
-		
-		int i = 0;
-		Instrument instrument = null;
-		boolean found = false;
-		
-		while (i < allInstrument.size() && !found) {
-			if (id == allInstrument.get(i).getId()) {
-				instrument = allInstrument.get(i);
-				if (instrument.getInstrumentName() == "Acoustic Drums") {
-					// ======= Acoustic Guitar Edit =======
-
-				} else if (instrument.getInstrumentName() == "Electric Drums") {
-					// ======= Electric Guitar Edit =======
-					System.out.println("HERE 2");
-				}
-				found = true;
-			}
-			i++;
-		}
-		
 		if (found == false) {
 			System.out.println("=> No ID : " + id + " found...");
 			return null;

@@ -10,7 +10,7 @@ public class Bass_Drum_Pad extends Percussion_Electronic {
 	}
 	
 	public String toString() {
-		return "[Bass Drum Pad | Diameter : " + this.getDiameter() + " | Material : " + this.getMaterial() + " | Sound : " + this.getSound() + "]";
+		return "[Bass Drum Pad (Diameter: " + this.getDiameter() + " | Material: " + this.getMaterial() + " | Sound: " + this.getSound() + ")]";
 	}
 	
 	public void initialize() {
@@ -43,6 +43,6 @@ public class Bass_Drum_Pad extends Percussion_Electronic {
 		super.setSound("bimmg...");
 		
 		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println(this.toString());
 	}
 }

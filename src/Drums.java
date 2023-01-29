@@ -75,9 +75,8 @@ public abstract class Drums extends Instrument {
 		super.initialize();
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("=> Assembly? :\n");
-		System.out.print("=> 1: Yes \n");
-		System.out.print("=> 2: No \n");
+		System.out.println("=> Assembly? :");
+		System.out.println("=> 1: Yes | 2: No");
 		int choice = scanner.nextInt();
 		scanner.nextLine();
 

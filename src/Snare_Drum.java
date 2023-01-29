@@ -1,12 +1,16 @@
 import java.util.Scanner;
 
 public class Snare_Drum extends Percussion_Acoustic {
+	
+	public Snare_Drum() {
+	}
+	
 	public Snare_Drum(float diameter, Percussion_Material material, String sound) {
 		super(diameter, material, sound);
 	}
 	
 	public String toString() {
-		return "[Snare Drum | Diameter : " + this.getDiameter() + " | Material : " + this.getMaterial() + " | Sound : " + this.getSound() + "]";
+		return "[Snare Drum (Diameter: " + this.getDiameter() + " | Material: " + this.getMaterial() + " | Sound: " + this.getSound() + ")]";
 	}
 	
 	public void initialize() {
@@ -42,6 +46,6 @@ public class Snare_Drum extends Percussion_Acoustic {
 		super.setSound("tinnnng...");
 		
 		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println("==>" + this.toString());
 	}
 }

@@ -10,7 +10,7 @@ public class Cymbale_Pad extends Percussion_Electronic {
 	}
 	
 	public String toString() {
-		return "[Cymbale Pad | Diameter : " + this.getDiameter() + " | Material : " + this.getMaterial() + " | Sound : " + this.getSound() + "]";
+		return "[Cymbale Pad (Diameter: " + this.getDiameter() + " | Material: " + this.getMaterial() + " | Sound: " + this.getSound() + ")]";
 	}
 	
 	public void initialize() {

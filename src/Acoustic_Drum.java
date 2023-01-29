@@ -11,10 +11,12 @@ public class Acoustic_Drum extends Drums {
 		super(price, brand, model, status, assembly, decoration, acousticDrums);
 	}
 	
+	
+	
 	public String toString() {
 		return "=> Acoustic Drums | Id : " + this.getId() + " | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
 			+ " | Model : " + this.getModel() + " | Status : " + this.getStatus() + " | Assembly : "
-			+ this.isAssembly() + " | Decoration : " + this.getDecoration() + " | Percussion : [" + this.getElectricDrums() + "]\n";
+			+ this.isAssembly() + " | Decoration : " + this.getDecoration() + " | Percussion : [" + this.getAcousticDrums() + "]\n";
 	}
 	
 	public void initialize() {

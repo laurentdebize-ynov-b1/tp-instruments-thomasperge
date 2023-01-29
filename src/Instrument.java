@@ -117,8 +117,7 @@ public class Instrument {
 				case 5:
 					// ======== Edit Status ========
 					System.out.print("<==== Edit Status ====>");
-					System.out.print("=> 1 : STOCK");
-					System.out.println("=> 2 : EXPOSITION");
+					System.out.print("=> 1 : STOCK | 2: EXPOSITION");
 					System.out.println("=> : ");
 					int editStatus = scanner.nextInt();
 					
@@ -155,8 +154,7 @@ public class Instrument {
 		this.model= scanner.nextLine();
 		
 		System.out.print("=> Status :\n");
-		System.out.println("1: Stock ");
-		System.out.println("2: Exposition ");
+		System.out.println("1: STOCK | 2: EXPOSITION");
 		int choice = scanner.nextInt();
 		scanner.nextLine();
 
