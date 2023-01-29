@@ -21,13 +21,13 @@ public class Violon extends String_Instrument {
 	}
 	
 	public String toString() {
-		return "=> Piano | Id : " + this.getId() + " | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
+		return "=> Violon | Id : " + this.getId() + " | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
 			+ " | Model : " + this.getModel() + " | Status : " + this.getStatus() + " | String Number : "
 			+ this.getStringNumber() + " | Wood Bow : " + this.getWoodBow();
 	}
 	
 	public void initialize() {
-		System.out.print("<===== New Instrument : Piano =====>\n");		
+		System.out.print("<===== New Instrument : Violon =====>\n");		
 		super.initialize();
 		Scanner scanner = new Scanner(System.in);
 		

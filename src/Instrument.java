@@ -72,6 +72,70 @@ public class Instrument {
 	public void setInstrumentName(String instrumentName) {
 		this.instrumentName = instrumentName;
 	}
+	
+	public void modify() {
+		Scanner scanner = new Scanner(System.in);
+		
+		int editChoise;
+		do {
+			System.out.println("=> 1 : Edit Id");
+			System.out.println("=> 2 : Edit Price");
+			System.out.println("=> 3 : Edit Brand");
+			System.out.println("=> 4 : Edit Model");
+			System.out.println("=> 5 : Edit Status");
+			System.out.println("=> 6 : Leave ");
+			System.out.println("=> : ");
+			
+			editChoise = scanner.nextInt();
+			
+			switch (editChoise) {
+				case 1:
+					// ======== Edit Id ========
+					System.out.println("<==== Edit ID ====>");
+					System.out.println("=> : ");
+					this.setId(scanner.nextInt());
+					break;
+				case 2:
+					// ======== Edit Price ========
+					System.out.println("<==== Edit Price ====>");
+					System.out.println("=> : ");
+					this.setPrice(scanner.nextInt());
+					scanner.nextLine();
+					break;
+				case 3:
+					// ======== Edit Brand ========
+					System.out.println("<==== Edit Brand ====>");
+					System.out.println("=> : ");
+					this.setBrand(scanner.nextLine());
+					break;
+				case 4:
+					// ======== Edit Model ========
+					System.out.println("<==== Edit Model ====>");
+					System.out.println("=> : ");
+					this.setModel(scanner.nextLine());
+					break;
+				case 5:
+					// ======== Edit Status ========
+					System.out.print("<==== Edit Status ====>");
+					System.out.print("=> 1 : STOCK");
+					System.out.println("=> 2 : EXPOSITION");
+					System.out.println("=> : ");
+					int editStatus = scanner.nextInt();
+					
+					switch (editStatus) {
+						case 1:
+							// ======== Status: Stock ========
+							this.setStatus(State.STOCK);
+							break;
+						case 2:
+							// ======== Status: Exposition ========
+							this.setStatus(State.EXPOSITION);
+							break;
+					}
+					break;
+			}
+		} while (editChoise != 6);
+	}
 
 	public void initialize() {
 		Scanner scanner = new Scanner(System.in);

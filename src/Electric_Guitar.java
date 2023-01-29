@@ -32,8 +32,7 @@ public class Electric_Guitar extends String_Instrument {
 	
 	public String toString() {
 		return "=> Electric Guitar | Id : " + this.getId() + " | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
-			+ " | Model : " + this.getModel() + " | Status : " + this.getStatus() + " | String Number : "
-			+ this.getStringNumber() + " | Microphone : " + this.getMicrophone() + " | Tunning : " + this.getTunning();
+			+ " | Model : " + this.getModel() + " | Status : " + this.getStatus()  + " | Microphone : " + this.getMicrophone() + " | Tunning : " + this.getTunning();
 	}
 	
 	public void initialize() {

@@ -11,7 +11,7 @@ public class Main {
 			System.out.println("\n<========== Menu Music Shop ==========>");
 			System.out.println("=> 1 : Display all Instrument");
 			System.out.println("=> 2 : Buy an Instrument");
-			System.out.println("=> 3 : Sell an Instrument");
+			System.out.println("=> 3 : Buy an Percussion");
 			System.out.println("=> 4 : Edit an Instrument");
 			System.out.println("=> 5 : Leave");
 			choice = scanner.nextInt();
@@ -96,20 +96,26 @@ public class Main {
 							// ==== Buy Acoustic Drums ====
 							Acoustic_Drum acousticDrum = new Acoustic_Drum();
 							acousticDrum.initialize();
-							acousticDrum.setInstrumentName("Accoustic Drum");
+							acousticDrum.setInstrumentName("Acoustic Drums");
 							allInstrument.add(acousticDrum);
 							break;
 						case 2 :
 							// ==== Buy Electric Drums ====
 							Electric_Drum electricDrum = new Electric_Drum();
 							electricDrum.initialize();
-							electricDrum.setInstrumentName("Electric Drum");
+							electricDrum.setInstrumentName("Electric Drums");
 							allInstrument.add(electricDrum);
 							break;
 					}
 					break;
 				}
 			break;
+			case 3 :
+				// ============ Buy an Percussion ============
+				System.out.println("<====== Buy an Percussion ======>");
+				Instrument findADrums = findADrums(allInstrument);
+				
+				break;
 			case 4 :
 				// ============ Edit Instrument ============
 				System.out.println("<====== Edit Instrument ======>");
@@ -118,7 +124,17 @@ public class Main {
 					System.out.println("==> Instrument : " + allInstru.getInstrumentName() + " (Id :" + allInstru.getId() + " | Brand : " + allInstru.getBrand() + " | Model : " + allInstru.getModel() + ")");
 				}
 				
-				System.out.println(findInstrument(allInstrument));
+				if (allInstrument.size() == 0) {
+					System.out.println("=> No Instrument in STOCK or in EXPOSITION...");
+					break;
+				}
+				
+				Instrument instrumentEdit = findInstrument(allInstrument);
+				
+				if (instrumentEdit != null) {
+					instrumentEdit.modify();
+				}
+				
 				break;
 			
 			}
@@ -140,6 +156,43 @@ public class Main {
 			}
 			i++;
 		}
-		return instrument;
+		if (found == false) {
+			System.out.println("=> No ID : " + id + " found...");
+			return null;
+		} else {
+			return instrument;
+		}
+	}
+	
+	public static Instrument findADrums(ArrayList<Drums> allInstrument) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("=> Enter Drums Id : ");
+		int id = scanner.nextInt();
+		
+		int i = 0;
+		Instrument instrument = null;
+		boolean found = false;
+		
+		while (i < allInstrument.size() && !found) {
+			if (id == allInstrument.get(i).getId()) {
+				instrument = allInstrument.get(i);
+				if (instrument.getInstrumentName() == "Acoustic Drums") {
+					// ======= Acoustic Guitar Edit =======
+
+				} else if (instrument.getInstrumentName() == "Electric Drums") {
+					// ======= Electric Guitar Edit =======
+					System.out.println("HERE 2");
+				}
+				found = true;
+			}
+			i++;
+		}
+		
+		if (found == false) {
+			System.out.println("=> No ID : " + id + " found...");
+			return null;
+		} else {
+			return instrument;
+		}
 	}
 }
