@@ -5,6 +5,7 @@ public class Instrument {
 	private String brand;
 	private String model;
 	private State status;
+	private int id;
 	
 	public Instrument() {
 	}
@@ -55,8 +56,20 @@ public class Instrument {
 		this.status = status;
 	}
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public void initialize() {
 		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("==> Id : ");
+		this.setId(scanner.nextInt());
+		scanner.nextLine();
 		
 		System.out.print("=> Price : ");
 		this.price = scanner.nextInt();

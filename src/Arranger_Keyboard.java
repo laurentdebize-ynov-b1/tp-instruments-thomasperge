@@ -21,7 +21,7 @@ public class Arranger_Keyboard extends Keyboard {
 	}
 	
 	public String toString() {
-		return "=> Arangeur KeyBoard | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
+		return "=> Arangeur KeyBoard | Id : " + this.getId() + " | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
 			+ " | Model : " + this.getModel() + " | Status : " + this.getStatus() + " | Number Key : "
 			+ this.getNumberKey() + " | Sound Number : " + this.getNumberOfSound();	
 	}
@@ -34,8 +34,8 @@ public class Arranger_Keyboard extends Keyboard {
 		System.out.print("=> Number of Sound : ");
 		this.numberOfSound = scanner.nextInt();
 		
-		System.out.print("<=== /!\\ Instrument created /!\\ ===>\n");
-		System.out.print(this.toString());
+		System.out.println("\n/!\\ Instrument created /!\\");
+		System.out.println("====" + this.toString());
 	}
 
 }

@@ -45,7 +45,7 @@ public class Charleston extends Percussion_Acoustic {
 		
 		super.setSound("pssst...");
 		
-		System.out.print("<=== /!\\ Instrument created /!\\ ===>\n");
-		System.out.print(this.toString());
+		System.out.println("\n/!\\ Instrument created /!\\");
+		System.out.println("====" + this.toString());
 	}
 }

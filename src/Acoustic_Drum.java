@@ -12,17 +12,15 @@ public class Acoustic_Drum extends Drums {
 	}
 	
 	public String toString() {
-		String newLine = System.getProperty("line.separator");
-		
-		return "=> Acoustic Drums | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
+		return "=> Acoustic Drums | Id : " + this.getId() + " | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
 			+ " | Model : " + this.getModel() + " | Status : " + this.getStatus() + " | Assembly : "
-			+ this.isAssembly() + " | Decoration : " + this.getDecoration() + newLine + "==> Acoustic Drums > Percussion : " + this.getAcousticDrums();
+			+ this.isAssembly() + " | Decoration : " + this.getDecoration() + " | Percussion : [" + this.getElectricDrums() + "]\n";
 	}
 	
 	public void initialize() {
 		System.out.print("<===== New Instrument : Acoustic Drum =====>\n");
 		super.initialize();
-		System.out.print("<=== /!\\ Instrument created /!\\ ===>\n");
-		System.out.print(this.toString());
+		System.out.println("\n/!\\ Instrument created /!\\");
+		System.out.println("====" + this.toString());
 	}
 }

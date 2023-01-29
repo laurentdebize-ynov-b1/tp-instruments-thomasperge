@@ -21,7 +21,7 @@ public class Violon extends String_Instrument {
 	}
 	
 	public String toString() {
-		return "=> Piano | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
+		return "=> Piano | Id : " + this.getId() + " | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
 			+ " | Model : " + this.getModel() + " | Status : " + this.getStatus() + " | String Number : "
 			+ this.getStringNumber() + " | Wood Bow : " + this.getWoodBow();
 	}
@@ -54,7 +54,7 @@ public class Violon extends String_Instrument {
 			break;
 		}
 		
-		System.out.print("<=== /!\\ Instrument created /!\\ ===>\n");
-		System.out.print(this.toString());
+		System.out.println("\n/!\\ Instrument created /!\\");
+		System.out.println("====" + this.toString());
 	}
 }

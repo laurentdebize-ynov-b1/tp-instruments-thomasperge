@@ -2,6 +2,9 @@
 public abstract class Percussion_Electronic extends Percussion {
 	private String sound;
 
+	public Percussion_Electronic() {
+	}
+	
 	public Percussion_Electronic(float diameter, Percussion_Material material, String sound) {
 		super(diameter, material);
 		this.sound = sound;

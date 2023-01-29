@@ -31,7 +31,7 @@ public class Electric_Guitar extends String_Instrument {
 	}
 	
 	public String toString() {
-		return "=> Electric Guitar | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
+		return "=> Electric Guitar | Id : " + this.getId() + " | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
 			+ " | Model : " + this.getModel() + " | Status : " + this.getStatus() + " | String Number : "
 			+ this.getStringNumber() + " | Microphone : " + this.getMicrophone() + " | Tunning : " + this.getTunning();
 	}
@@ -96,8 +96,8 @@ public class Electric_Guitar extends String_Instrument {
 			break;
 		}
 		
-		System.out.print("<=== /!\\ Instrument created /!\\ ===>\n");
-		System.out.print(this.toString());
+		System.out.println("\n/!\\ Instrument created /!\\");
+		System.out.println("====" + this.toString());
 	}
 
 }

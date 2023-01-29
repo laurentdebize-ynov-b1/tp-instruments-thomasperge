@@ -52,7 +52,7 @@ public class Piano extends Keyboard implements Accord_Instrument {
 	}
 	
 	public String toString() {
-		return "=> Piano | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
+		return "=> Piano | Id : " + this.getId()  + " | Price : " + this.getPrice() + " | Brand : " + this.getBrand()
 			+ " | Model : " + this.getModel() + " | Status : " + this.getStatus() + " | Key Number : "
 			+ this.getNumberKey() + " | Wood Hammer : " + this.getWoodHammer() + " | Number Hammer : " + this.getNumberHammer() + " | Tunning Price : " + this.getTunningPrice();
 	}
@@ -93,8 +93,8 @@ public class Piano extends Keyboard implements Accord_Instrument {
 		
 		this.tunningAnInstrument();
 		
-		System.out.print("<=== /!\\ Instrument created /!\\ ===>\n");
-		System.out.print(this.toString());
+		System.out.println("\n/!\\ Instrument created /!\\");
+		System.out.println("====" + this.toString());
 	}
 
 	@Override
