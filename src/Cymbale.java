@@ -45,7 +45,7 @@ public class Cymbale extends Percussion_Acoustic {
 		
 		super.setSound("diiiiing...");
 		
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("==>" + this.toString());
+		System.out.println("\n	/!\\ Instrument created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 }

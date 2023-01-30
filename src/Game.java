@@ -209,9 +209,10 @@ public class Game {
 			case 3 :
 				// ============ Edit Instrument ============
 				System.out.println("<====== Edit Instrument ======>");
+				System.out.println("==> All Instrument : <==");
 				
 				for (Instrument allInstru : allInstrument) {
-					System.out.println("==> Instrument : " + allInstru.getInstrumentName() + " (Id :" + allInstru.getId() + " | Brand : " + allInstru.getBrand() + " | Model : " + allInstru.getModel() + ")");
+					System.out.println("   => " + allInstru.getInstrumentName() + " (Id :" + allInstru.getId() + " | Brand : " + allInstru.getBrand() + " | Model : " + allInstru.getModel() + ")");
 				}
 				
 				if (allInstrument.size() == 0) {
@@ -233,7 +234,7 @@ public class Game {
 	
 	public static Instrument findInstrument(ArrayList<Instrument> allInstrument) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("\n=> Instrument to Edit | ID : ");
+		System.out.println("\n===> Instrument to Edit | ID : ");
 		int id = scanner.nextInt();
 
 		int i = 0;

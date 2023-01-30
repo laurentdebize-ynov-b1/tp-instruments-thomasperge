@@ -34,8 +34,8 @@ public class Arranger_Keyboard extends Keyboard {
 		System.out.print("=> Number of Sound : ");
 		this.numberOfSound = scanner.nextInt();
 		
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println("\n	/!\\ Instrument created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 
 }

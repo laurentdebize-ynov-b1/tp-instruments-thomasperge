@@ -19,7 +19,7 @@ public class Electric_Drum extends Drums {
 	public void initialize() {
 		System.out.print("<===== New Instrument : Electric Drum =====>\n");
 		super.initialize();
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println("\n	/!\\ Instrument created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 }

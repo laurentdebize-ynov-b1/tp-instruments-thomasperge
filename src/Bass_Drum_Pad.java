@@ -42,7 +42,7 @@ public class Bass_Drum_Pad extends Percussion_Electronic {
 		
 		super.setSound("bimmg...");
 		
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println(this.toString());
+		System.out.println("\n	/!\\ Percussion created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 }

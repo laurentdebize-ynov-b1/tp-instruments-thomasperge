@@ -45,7 +45,7 @@ public class Tom extends Percussion_Acoustic {
 		
 		super.setSound("doummg...");
 		
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("==>" + this.toString());
+		System.out.println("\n	/!\\ Percusssion created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 }

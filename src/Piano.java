@@ -93,8 +93,8 @@ public class Piano extends Keyboard implements Accord_Instrument {
 		
 		this.tunningAnInstrument();
 		
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println("\n	/!\\ Instrument created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 
 	@Override

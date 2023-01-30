@@ -42,7 +42,7 @@ public class Cymbale_Pad extends Percussion_Electronic {
 		
 		super.setSound("spiiing...");
 		
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println("\n	/!\\ Percussion created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 }

@@ -22,7 +22,7 @@ public class Acoustic_Drum extends Drums {
 	public void initialize() {
 		System.out.print("<===== New Instrument : Acoustic Drum =====>\n");
 		super.initialize();
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println("\n	/!\\ Instrument created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 }

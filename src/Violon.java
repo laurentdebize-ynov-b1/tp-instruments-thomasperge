@@ -54,7 +54,7 @@ public class Violon extends String_Instrument {
 			break;
 		}
 		
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("====" + this.toString());
+		System.out.println("\n  /!\\ Instrument created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 }

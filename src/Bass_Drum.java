@@ -45,7 +45,7 @@ public class Bass_Drum extends Percussion_Acoustic {
 		
 		super.setSound("booom...");
 		
-		System.out.println("\n/!\\ Instrument created /!\\");
-		System.out.println("==>" + this.toString());
+		System.out.println("\n	/!\\ Percussion created /!\\");
+		System.out.println("	==" + this.toString());
 	}
 }

@@ -84,7 +84,6 @@ public class Instrument {
 			System.out.println("=> 4 : Edit Model");
 			System.out.println("=> 5 : Edit Status");
 			System.out.println("=> 6 : Leave ");
-			System.out.println("=> : ");
 			
 			editChoise = scanner.nextInt();
 			
@@ -92,33 +91,28 @@ public class Instrument {
 				case 1:
 					// ======== Edit Id ========
 					System.out.println("<==== Edit ID ====>");
-					System.out.println("=> : ");
 					this.setId(scanner.nextInt());
 					break;
 				case 2:
 					// ======== Edit Price ========
 					System.out.println("<==== Edit Price ====>");
-					System.out.println("=> : ");
 					this.setPrice(scanner.nextInt());
 					scanner.nextLine();
 					break;
 				case 3:
 					// ======== Edit Brand ========
 					System.out.println("<==== Edit Brand ====>");
-					System.out.println("=> : ");
 					this.setBrand(scanner.nextLine());
 					break;
 				case 4:
 					// ======== Edit Model ========
 					System.out.println("<==== Edit Model ====>");
-					System.out.println("=> : ");
 					this.setModel(scanner.nextLine());
 					break;
 				case 5:
 					// ======== Edit Status ========
 					System.out.print("<==== Edit Status ====>");
 					System.out.print("=> 1 : STOCK | 2: EXPOSITION");
-					System.out.println("=> : ");
 					int editStatus = scanner.nextInt();
 					
 					switch (editStatus) {
